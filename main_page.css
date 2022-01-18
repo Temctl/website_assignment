@@ -1,24 +1,129 @@
-html {
-    background-color: bisque;
-}
-
 
 .container {
-    display: flex;
+    display: flexbox;
+    background-color: bisque;
+    overflow: scroll;
     flex-direction: column;
     justify-content: flex-start;
+    align-items: stretch;
+    flex-wrap: nowrap;
+}
+
+#headLine{
+    text-align:center;
+    font-size: 50px;
+}
+
+.header {
+    display:flexbox;
+    background-color: beige;
+    vertical-align: middle;
+}
+.body{
+    display: flex;
+    background-color: rgb(212, 96, 75);
+}
+footer{
+    flex-direction: column;
+    display: flex;
+    margin-top: 20px;
+    background-color: rgba(0,0,0,0.4);
     align-items: center;
     flex-wrap: nowrap;
 }
 
-
-.header {
-    display:flex;
-    background-color: beige;
+.bar{
+    list-style-type: none;
+    height: 38px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    text-align: right;
+    background-color: rgb(207, 223, 71);
+}
+.current_page{
+    float: left;
+    background-color: rgb(212, 96, 75);
 }
 
-.body {
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+li{
+    vertical-align: middle;
+    float: left;
+    border-right:0.2px black solid;
+    text-align: center;
+    padding: 10px 15px;
+    text-decoration: none;
+}
+li#leftLi{
+    border-right: 0px;
+}
+li:hover{
+    background-color:tomato;
+}
+.header li#leftLiandCurrent{
+    background-color: rgb(212, 96, 75);
+    border-right: 0px;
+}
+
+/*index.html specific*/
+.slideContainer{
+    border-top:10px burlywood solid;
+    display:flex;
+    position: relative;
+    margin: auto;
+    background-color: burlywood;
+    justify-content: center;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 4px 4px 0;
+    user-select: none;
+}
+
+.prev{
+    left: 0;
+}
+
+.next {
+    right: 0;
+    border-radius: 4px 0 0 4px;
+}
+.text {
+    color: #000000;
+    font-size: 18px;
+    text-align: center;
+}
+
+.prev:hover, .next:hover {
+background-color: rgba(0,0,0,0.8);
+}
+
+#car{
     display: flex;
+    border-bottom:2px rgb(139, 68, 9) solid;
     background-color: burlywood;
 }
-
+#left-side{
+    font-size: 0.7rem;
+    font-style: italic;
+    margin-left: 20PX;
+}
+#right-side{
+    margin-left: 20px;
+}
