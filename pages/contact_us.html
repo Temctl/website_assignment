@@ -15,19 +15,24 @@
                 <li id="leftLiandCurrent"><a>Contact us</a></li>
             </ul>
         </div>
-        <form>
-            <label>First name:</label>
-            <input type="text" id="first_name"><br>
-            <label>Last_name:</label>
-            <input type="text" id="last_name"><br>
-            <label>Your question:</label>
-            <input style="height: 30px;" type="text" id="question"><br>
-            <input type="button" value="submit" id="submit" onclick="">
-        </form>
+        <div id="formcontainer">
+            <form name="myForm" action="/email.php" method="post">
+                <label>First name:</label>
+                <input type="text" name="first_name"><br>
+                <label>Last_name:</label>
+                <input type="text" name="last_name"><br>
+                <label>Country:</label>
+                <input type="text" named="country"><br>
+                <label>Your question:</label>
+                <input style="height: 30px;" type="text" name="question"><br>
+                <label>Email:</label>
+                <input type="text" named="email"><br>
+                <button type="submit" form="myForm" value="submit">Submit</button>
+            </form>
+        </div>
         <footer>
             <p style="height: 10px;">Written by: Temuulen Ulziisaikhan</p>
             <p style="height: 10px;">date: 2022.01.17</p>
         <footer>
     </body>
-    <script src="javascript/actions.js"></script>
 </html>

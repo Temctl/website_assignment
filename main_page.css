@@ -128,8 +128,29 @@ background-color: rgba(0,0,0,0.8);
     margin-left: 20px;
 }
 
+#formcontainer{
+    display: flexbox;
+    align-items: center;
+}
 form{
+    background-color: blue;
+    height: 320px;
+    width: 10cm;
     display: flex;
     flex-direction: column;
     align-items: center;
+    max-height: 100%;
+    width: auto;
+}
+input{
+    width: ;
+    display: flex;
+    max-height: 100%;
+    width: auto;
+}
+button{
+    width: 100px;
+    display: flex;
+    max-height: 100%;
+    width: auto;
 }
