@@ -9,6 +9,7 @@
     flex-wrap: nowrap;
 }
 
+
 #headLine{
     text-align:center;
     font-size: 50px;
@@ -33,19 +34,22 @@ footer{
 }
 
 .bar{
+    display: flex;
+    flex-wrap: wrap;
     list-style-type: none;
-    height: 38px;
+    min-width: min-content;
     margin: auto;
     padding: 0;
     overflow: hidden;
     text-align: right;
-    background-color: rgb(207, 223, 71);
+    background-color: rgb(209, 154, 36);
+    margin-bottom: 2px;
 }
+
 .current_page{
     float: left;
     background-color: rgb(212, 96, 75);
 }
-
 
 img{
     max-width: 100%;
@@ -54,6 +58,7 @@ img{
 
 li{
     width: max-content;
+    min-width: min-content;
     vertical-align: middle;
     float: left;
     border-right:0.2px black solid;
@@ -61,6 +66,7 @@ li{
     padding: 10px 15px;
     text-decoration: none;
 }
+
 li#leftLi{
     border-right: 0px;
 }
@@ -70,6 +76,34 @@ li:hover{
 .header li#leftLiandCurrent{
     background-color: rgb(212, 96, 75);
     border-right: 0px;
+}
+#stageConatiner{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+#stages{
+    display: flex;
+    padding-left: 0px;
+    justify-content: flex-start;
+}
+#stage{
+    display: flex;
+    width: auto;
+    margin: auto;
+    min-width: min-content;
+    vertical-align: none;
+    float: none;
+    border-right:none;
+    text-align: none;
+    text-decoration: none;
+    align-self: stretch;
+}
+#stage p{
+    background-color: rgb(245, 203, 227);
+}
+#lastText{
+    border-bottom:0.2px black solid;
 }
 
 /*index.html specific*/
@@ -133,6 +167,7 @@ background-color: rgba(0,0,0,0.8);
 
 #formcontainer{
     display: flex;
+    margin-top: 15px;
 }
 form{
     margin: auto;
@@ -143,6 +178,7 @@ input{
     width: 100px;
     display: flex;
     min-width: fit-content;
+    background-color: goldenrod;
 }
 button{
     width: auto;
@@ -158,34 +194,80 @@ button{
 #column{
     display: flex;
     flex-shrink: 1;
-    width: 95vw;
+    width: 96vw;
     height: auto;
     position: relative;
-    padding: 4px;
     background-color: blue;
 }
 #pic{
     display: flex;
     flex: 1;
 }
-#textOverLeft{
+#driverPic{
+    width: 100%;
+}
+#transFore{
     display: inline-block;
     position: absolute;
-    text-align: middle;
-    width: 100%;
+    width: 50%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.3);
 }
-#textOverRight{
+#textInsideLeft {
     display: inline-block;
     position: absolute;
-    text-align: middle;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.05);
+    font-size: 30px;
+    color: gold;
+    top: 5%;
+    left: 35%;
 }
-#textInside{
-    margin-left: 50%;
-    width: 100%;
-    text-align: middle;
+#textInsideRight{
+    display: inline-block;
+    position: absolute;
+    font-size: 30px;
+    color: gold;
+    top: 5%;
+    right: 10%;
+}
+#qAnda{
+    display: flex;
+    margin-top: 10px;
+    flex-direction: column;
+    justify-content: center;
+}
+iframe{
+    position: absolute;
+}
+@media screen and (max-width: 600px) {
+    .bar{
+        flex-direction: column;
+    }
+    li{
+        padding: 0px 0px;
+        padding-top: 10px;
+        padding-bottom: 8px;
+        width: 100%;
+        border-right: 0px;
+        border-bottom:0.2px black solid;
+        text-align: middle;
+        background-color: rgb(209, 154, 36);
+    }
+    li#leftLi{
+        border-bottom: 0px;
+    }
+    .header li#leftLiandCurrent{
+        background-color: rgb(212, 96, 75);
+        border-bottom: 0px;
+    }
+    #stages{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex-direction: flex-start  space-between;
+        align-items: stretch;
+    }
+    #stage{
+        background-color:rgba(0, 0, 0, 0);
+        border-bottom:0px;
+    }
 }

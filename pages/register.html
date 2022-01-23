@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang = "en">
 <html class="container">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <head>
         <link rel="stylesheet" href="../main_page.css">
     </head>
@@ -8,14 +9,41 @@
         <div class = "header">
             <h1 id="headLine">Wanna join?</h1>
             <ul class="bar">
-                <li><a href="drivers.html">drivers</a></li>
                 <li><a href="../index.html">Home</a></li>
                 <li><a href="abous_us.html">About us</a></li>
-                <li class="current_page"><a href="register.html">Register</a></li>
+                <li class="current_page"><a href="">Register</a></li>
                 <li><a href="Q&A.html">Q&A</a></li>
+                <li><a href="drivers.html">drivers</a></li>
                 <li id="leftLi"><a href="contact_us.html">Contact us</a></li>
             </ul>
         </div>
+        <div style="width:100%; height:0; padding-bottom:56%; position:relative;">
+            <iframe src="https://giphy.com/embed/CzhKIsHueD4SLNk9dR" width="100%" height="100%" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+        </div>
+        <div id= "stageConatiner">
+            <h2>Overview of the rally.</h2>
+            <ul id= "stages">
+                <h4 id= "mainStages">Three main special stages of the rally:</h4>
+                <li id="stage"><p>First one is private dirt road race. This road will be 40 km of bumpy dirt road.</p></li>
+                <li id="stage"><p>Second one is private cement road race. This road will be 20 km of mostly straight cement road.</p></li>
+                <li id="stage"><p>Third one is private cement road race. Unlike the second one, this one is filled with sharp turns and little bit of slopes. The length will be roughly the same as the first one but depends on which country the drivers are in.</p></li>
+            </ul>
+            <p id="lastText">Three stages will be repeated several times across Kyrgyzstan, Kazakhstan, Russia, Mongolia, China. In between stages, drivers will be riding on public roads following all public traffic rules.</p>
+        </div>
+        <fieldset id="formcontainer">
+            <legend>Fill the following inputs to submit your ticket booking.</legend>
+            <form name="myForm" action="/email.php" method="post">
+                <label for="first_name">First name:</label>
+                <input id="first_name" type="text" name="first_name"><br>
+                <label for="last_name">Last_name:</label>
+                <input id="last_name" type="text" name="last_name"><br>
+                <label for="phoneNumber">Phone number:</label>
+                <input id="phoneNumber" type="text" named="phoneNumber"><br>
+                <label for="email">Email:</label>
+                <input id="email" type="text" named="email"><br>
+                <button type="submit" form="myForm" value="submit">Submit</button>
+            </form>
+        </fieldset>
         <footer>
             <p style="height: 10px;">Written by: Temuulen Ulziisaikhan</p>
             <p style="height: 10px;">date: 2022.01.17</p>

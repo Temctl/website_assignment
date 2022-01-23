@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang = "en">
 <html class="container">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <head>
         <link rel="stylesheet" href="../main_page.css">
     </head>
@@ -8,17 +9,43 @@
         <div class = "header">
             <h1 id="headLine">Question and answer section</h1>
             <ul class="bar">
-                <li><a href="drivers.html">drivers</a></li>
                 <li><a href="../index.html">Home</a></li>
                 <li><a href="abous_us.html">About us</a></li>
                 <li><a href="register.html">Register</a></li>
-                <li class="current_page"><a>Q&A</a></li>
+                <li class="current_page"><a href="">Q&A</a></li>
+                <li><a href="drivers.html">drivers</a></li>
                 <li id="leftLi"><a href="contact_us.html">Contact us</a></li>
             </ul>
+        </div>
+        <fieldset id="formcontainer">
+            <legend>Submit your first and last names and email if you are registered member</legend>
+            <form method="post">
+                <label for="first_name">First name:</label>
+                <input id="first_name" type="text"><br>
+                <label for="last_name">Last_name:</label>
+                <input id="last_name" type="text"><br>
+                <label for="email">Email:</label>
+                <input id="email" type="text"><br>
+                <button type="button" value="submit" onclick="checkRegistered()">Submit</button>
+            </form>
+        </fieldset>
+        <form id="searchForm" role="search"> 
+            <input type="search" id="query" name="q" placeholder="Search...">
+            <button>Search</button>
+        </form>
+        <div id=qAnda>
+            <!--questions will be written by the code--> 
+        </div>
+        <div>
+            <form> 
+                <input id="qAndquestion" type="text" placeholder="question...">
+                <button type="submit" onclick="submittedQuestion()">Search</button>
+            </form>
         </div>
         <footer>
             <p style="height: 10px;">Written by: Temuulen Ulziisaikhan</p>
             <p style="height: 10px;">date: 2022.01.17</p>
         <footer>
     </body>
+    <script src="../javascript/actions.js"></script>
 </html>
