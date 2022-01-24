@@ -13,22 +13,24 @@ function addQuestion(line, start){
     let legend;
     let p;
     
-    if(start){
-        for(var i = 0; i < list.length; i++){
-            field = document.createElement('fieldset');
-            legend = document.createElement('legend');
-            p = document.createElement('p');
+    for(var i = 0; i < list.length; i++){
+        field = document.createElement('fieldset');
+        legend = document.createElement('legend');
+        p = document.createElement('p');
 
-            legend.innerHTML = list[i];
-            p.innerHTML = listAnswers[i];
+        legend.innerHTML = list[i];
+        p.innerHTML = listAnswers[i];
 
-            field.appendChild(legend);
-            field.appendChild(p);
+        field.appendChild(legend);
+        field.appendChild(p);
 
-            questionDiv.appendChild(field);
+        questionDiv.appendChild(field);
+    }
+    if(!start){
+        field = document.createElement('fieldset');
+        legend = document.createElement('legend');
+        p = document.createElement('p');
 
-        }
-    }else{
         legend.innerHTML = line;
         p.innerHTML = "no answer yet";
 
@@ -36,13 +38,16 @@ function addQuestion(line, start){
         field.appendChild(p);
 
         questionDiv.appendChild(field);
+        alert("added");
+        document.getElementById('flex').style.visibility = "visible";
+        document.getElementById('searchForm').style.visibility = "visible";
+        document.getElementById('formcontainer').style.display = "none";
     }
     
 }
 
 function submittedQuestion(){
-    let question = document.getElementById('qAndquestion');
-    addQuestion(question.textContent, false);
+    addQuestion(document.getElementById('qAndquestion').value, false);
 }
 
 
@@ -52,14 +57,14 @@ function checkRegistered(){
     let first_name = document.getElementById("first_name");
     let last_name = document.getElementById("last_name");
     let email = document.getElementById("email");
-    /*if(first_name.textContent == "" || last_name.textContent == "" || email.textContent == ""){
+    if(first_name.value == "" || last_name.value == "" || email.value == ""){
         filled = false;
-    }*/
+    }
     if(filled){
         existingQuestion();
-        form.style.display = "none";
-        $("#formcontainer").css("display", "none");
-        document.location.reload();
+        document.getElementById('flex').style.visibility = "visible";
+        document.getElementById('searchForm').style.visibility = "visible";
+        document.getElementById('formcontainer').style.display = "none";
     }else{
         alert("fill the inputs");
     }

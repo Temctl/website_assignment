@@ -33,6 +33,7 @@ footer{
     flex-wrap: nowrap;
 }
 
+
 .bar{
     display: flex;
     flex-wrap: wrap;
@@ -229,12 +230,8 @@ button{
     top: 5%;
     right: 10%;
 }
-#qAnda{
-    display: flex;
-    margin-top: 10px;
-    flex-direction: column;
-    justify-content: center;
-}
+
+
 iframe{
     position: absolute;
 }
@@ -270,4 +267,38 @@ iframe{
         background-color:rgba(0, 0, 0, 0);
         border-bottom:0px;
     }
+}
+
+div#flex{
+    display: flex;
+    flex-direction: row;
+    visibility: hidden;
+}
+#formcontainerQ{
+    display: flex;
+    margin-top: 15px;
+    width: 80vw;
+}
+#qAnda{
+    display: flex;
+    margin-top: 10px;
+    flex-direction: column;
+    justify-content: center;
+}
+#qAndquestion{
+    height: 30px;
+    width: auto;
+}
+#searchForm{
+    flex-direction: row;
+    justify-content: center;
+    visibility: hidden;
+    margin-top: 15px;
+}
+#query{
+    width: 100%;
+}
+#questionButton{
+    width: auto;
+    background-color:rgb(212, 211, 211);
 }
