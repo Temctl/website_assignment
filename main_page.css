@@ -301,4 +301,13 @@ div#flex{
 #questionButton{
     width: auto;
     background-color:rgb(212, 211, 211);
+    text-align: center;
+}
+#questionButton:hover{
+    background-color: darkgray;
+    color: white;
+}
+#query:focus{
+    background-color: thistle;
+    
 }

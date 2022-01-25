@@ -12,21 +12,21 @@ function addQuestion(line, start){
     let field;
     let legend;
     let p;
+    if(start){
+        for(var i = 0; i < list.length; i++){
+            field = document.createElement('fieldset');
+            legend = document.createElement('legend');
+            p = document.createElement('p');
     
-    for(var i = 0; i < list.length; i++){
-        field = document.createElement('fieldset');
-        legend = document.createElement('legend');
-        p = document.createElement('p');
-
-        legend.innerHTML = list[i];
-        p.innerHTML = listAnswers[i];
-
-        field.appendChild(legend);
-        field.appendChild(p);
-
-        questionDiv.appendChild(field);
-    }
-    if(!start){
+            legend.innerHTML = list[i];
+            p.innerHTML = listAnswers[i];
+    
+            field.appendChild(legend);
+            field.appendChild(p);
+    
+            questionDiv.appendChild(field);
+        }
+    }else{
         field = document.createElement('fieldset');
         legend = document.createElement('legend');
         p = document.createElement('p');
@@ -58,7 +58,8 @@ function checkRegistered(){
     let last_name = document.getElementById("last_name");
     let email = document.getElementById("email");
     if(first_name.value == "" || last_name.value == "" || email.value == ""){
-        filled = false;
+        filled = false
+        
     }
     if(filled){
         existingQuestion();
