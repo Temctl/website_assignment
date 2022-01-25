@@ -30,15 +30,15 @@
             </form>
         </fieldset>
         <form id="searchForm" role="search"> 
-            <input type="search" id="query" name="q" placeholder="Search...">
-            <input id ="questionButton" value="search" type="button"></input>
+            <input type="search" id="query" name="q" placeholder="Search..." onkeypress="if (event.keyCode == 13) {return false}">
+            <input id ="questionButton" value="search" type="button" onclick="search()"></input>
         </form>
         <div id=qAnda>
             <!--questions will be written by the code--> 
         </div>
         <div id=flex>
             <form id="formcontainerQ"> 
-                <input id="qAndquestion" type="text" placeholder="question...">
+                <input id="qAndquestion" type="text" placeholder="question..." onkeypress="if (event.keyCode == 13) {return false}">
                 <input id ="questionButton" value="submit" type="button" onclick="submittedQuestion()"></input>
             </form>
         </div>

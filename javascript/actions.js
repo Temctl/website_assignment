@@ -2,10 +2,10 @@ let listAnswers = ["From what date and how long?", "Where is the rally starting?
 let list = ["From what date and how long?", "Where is the rally starting?", "How many drivers are competing?"]
 
 function existingQuestion(){
-    addQuestion("", true);
+    addQuestion("", true, "");
 }
 
-function addQuestion(line, start){
+function addQuestion(line, start, answer){
 
     let questionDiv = document.getElementById('qAnda');
 
@@ -32,7 +32,14 @@ function addQuestion(line, start){
         p = document.createElement('p');
 
         legend.innerHTML = line;
-        p.innerHTML = "no answer yet";
+        alert(answer);
+        if(answer.length > 0){
+            p.innerHTML = answer;
+        }else{
+            p.innerHTML = "no answer yet";
+        }
+        list.push(line);
+        listAnswers.push(p.innerHTML);
 
         field.appendChild(legend);
         field.appendChild(p);
@@ -47,7 +54,7 @@ function addQuestion(line, start){
 }
 
 function submittedQuestion(){
-    addQuestion(document.getElementById('qAndquestion').value, false);
+    addQuestion(document.getElementById('qAndquestion').value, false, "");
 }
 
 
@@ -69,6 +76,27 @@ function checkRegistered(){
     }else{
         alert("fill the inputs");
     }
+}
+
+function search(){
+    let string = document.getElementById('query').value;
+
+    let questionDiv = document.getElementById('qAnda');
+    questionDiv.innerHTML = "";
+
+    if(string.length > 0){
+        let temp = list.length
+        for(let i = 0; i < temp; i++){
+            alert(i);
+            if(list[i].includes(string)){
+                addQuestion(list[i], false, listAnswers[i]);
+            }
+        }
+    }else{
+        existingQuestion();
+    }
+
+    
 }
 
 
