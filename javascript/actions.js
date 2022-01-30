@@ -32,7 +32,6 @@ function addQuestion(line, start, answer){
         p = document.createElement('p');
 
         legend.innerHTML = line;
-        alert(answer);
         if(answer.length > 0){
             p.innerHTML = answer;
         }else{
@@ -45,10 +44,9 @@ function addQuestion(line, start, answer){
         field.appendChild(p);
 
         questionDiv.appendChild(field);
-        alert("added");
         document.getElementById('flex').style.visibility = "visible";
         document.getElementById('searchForm').style.visibility = "visible";
-        document.getElementById('formcontainer').style.display = "none";
+        document.getElementById('formcontainerLogin').style.display = "none";
     }
     
 }
@@ -66,16 +64,19 @@ function checkRegistered(){
     let email = document.getElementById("email");
     if(first_name.value == "" || last_name.value == "" || email.value == ""){
         filled = false
-        
     }
     if(filled){
         existingQuestion();
         document.getElementById('flex').style.visibility = "visible";
         document.getElementById('searchForm').style.visibility = "visible";
-        document.getElementById('formcontainer').style.display = "none";
+        document.getElementById('formcontainerLogin').style.display = "none";
     }else{
-        alert("fill the inputs");
+        document.getElementById("myModal").style.visibility = "visible";
     }
+}
+
+function closeModal(){
+    document.getElementById("myModal").style.visibility = "hidden";
 }
 
 function search(){
@@ -87,7 +88,6 @@ function search(){
     if(string.length > 0){
         let temp = list.length
         for(let i = 0; i < temp; i++){
-            alert(i);
             if(list[i].includes(string)){
                 addQuestion(list[i], false, listAnswers[i]);
             }

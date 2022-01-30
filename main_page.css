@@ -1,6 +1,6 @@
 
 .container {
-    display: flexbox;
+    display: flex;
     background-color: bisque;
     overflow: scroll;
     flex-direction: column;
@@ -16,7 +16,6 @@
 }
 
 .header {
-    display:flexbox;
     background-color: beige;
     vertical-align: middle;
 }
@@ -71,7 +70,7 @@ li{
 li#leftLi{
     border-right: 0px;
 }
-li:hover{
+.bar li:hover{
     background-color:tomato;
 }
 .header li#leftLiandCurrent{
@@ -88,19 +87,16 @@ li:hover{
     padding-left: 0px;
     justify-content: flex-start;
 }
-#stage{
+.stage{
     display: flex;
     width: auto;
     margin: auto;
     min-width: min-content;
-    vertical-align: none;
     float: none;
     border-right:none;
-    text-align: none;
-    text-decoration: none;
     align-self: stretch;
 }
-#stage p{
+.stage p{
     background-color: rgb(245, 203, 227);
 }
 #lastText{
@@ -109,6 +105,7 @@ li:hover{
 
 /*index.html specific*/
 .slideContainer{
+    width: 100%;
     border-top:10px burlywood solid;
     display:flex;
     position: relative;
@@ -150,23 +147,32 @@ li:hover{
 background-color: rgba(0,0,0,0.8);
 }
 
-#car{
+.car{
     display: flex;
     border-bottom:2px rgb(139, 68, 9) solid;
     background-color: burlywood;
 }
-#left-side{
+.carb{
+    display: flex;
+    border-bottom:0px;
+    background-color: burlywood;
+}
+.left-side{
     font-size: 0.7rem;
     font-style: italic;
     margin-left: 20PX;
 }
-#right-side{
+.right-side{
     margin-left: 20px;
     width: auto;
     height: 300px;
 }
 
-#formcontainer{
+.formcontainer{
+    display: flex;
+    margin-top: 15px;
+}
+#formcontainerLogin{
     display: flex;
     margin-top: 15px;
 }
@@ -192,7 +198,7 @@ button{
     align-items: center;
     justify-content: center;
 }
-#column{
+.column{
     display: flex;
     flex-shrink: 1;
     width: 96vw;
@@ -200,21 +206,21 @@ button{
     position: relative;
     background-color: blue;
 }
-#pic{
+.pic{
     display: flex;
     flex: 1;
 }
-#driverPic{
+.driverPic{
     width: 100%;
 }
-#transFore{
+.transFore{
     display: inline-block;
     position: absolute;
     width: 50%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.3);
 }
-#textInsideLeft {
+.textInsideLeft {
     display: inline-block;
     position: absolute;
     font-size: 30px;
@@ -222,7 +228,7 @@ button{
     top: 5%;
     left: 35%;
 }
-#textInsideRight{
+.textInsideRight{
     display: inline-block;
     position: absolute;
     font-size: 30px;
@@ -246,7 +252,7 @@ iframe{
         width: 100%;
         border-right: 0px;
         border-bottom:0.2px black solid;
-        text-align: middle;
+        text-align: center;
         background-color: rgb(209, 154, 36);
     }
     li#leftLi{
@@ -260,11 +266,17 @@ iframe{
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        flex-direction: flex-start  space-between;
         align-items: stretch;
     }
-    #stage{
+    .stage{
         background-color:rgba(0, 0, 0, 0);
+        border-bottom:0px;
+    }
+    #mainStages{
+        background-color: rgba(0, 0, 0, 0);
+    }
+    .driver{
+        background-color: rgba(0, 0, 0, 0);
         border-bottom:0px;
     }
 }
@@ -298,7 +310,7 @@ div#flex{
 #query{
     width: 100%;
 }
-#questionButton{
+.questionButton{
     width: auto;
     background-color:rgb(212, 211, 211);
     text-align: center;
@@ -310,4 +322,64 @@ div#flex{
 #query:focus{
     background-color: thistle;
     
+}
+.modalFade {
+    display: block; /* Hidden by default */
+    visibility: hidden;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #c0b1b1;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+.height{
+    height: 10px
+}
+.block{
+    display: block;
+}
+.margin{
+    margin-right: 5px;
+}
+.textCenter{
+    text-align: center
+}
+#gif{
+    width:100%; 
+    height:0; 
+    padding-bottom:56%; 
+    position:relative;
+}
+#drivers{
+    display: flex;
+    flex-direction: column;
+}
+.driver{
+    width: max-content;
+    min-width: min-content;
+    vertical-align: middle;
+    float: left;
+    border-right:0px;
+    text-align: center;
+    padding: 10px 15px;
+    text-decoration: none;
+    pointer-events: none;
+}
+.giphy-embed{
+    width: 100%;
+    height: 100%;
+    border: 0px;
 }
