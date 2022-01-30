@@ -106,7 +106,7 @@ li#leftLi{
 /*index.html specific*/
 .slideContainer{
     width: 100%;
-    border-top:10px burlywood solid;
+    border-top:10px;
     display:flex;
     position: relative;
     margin: auto;
@@ -171,10 +171,12 @@ background-color: rgba(0,0,0,0.8);
 .formcontainer{
     display: flex;
     margin-top: 15px;
+    box-shadow: 5px 10px rgb(119, 106, 89);
 }
 #formcontainerLogin{
     display: flex;
     margin-top: 15px;
+    box-shadow: 5px 10px rgb(119, 106, 89);
 }
 form{
     margin: auto;
